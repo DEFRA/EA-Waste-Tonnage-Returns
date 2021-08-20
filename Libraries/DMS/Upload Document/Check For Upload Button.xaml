@@ -1,27 +1,28 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Click_Properties_Button" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:us="clr-namespace:UiPathTeam.SharePoint;assembly=UiPathTeam.SharePoint" xmlns:usa="clr-namespace:UiPathTeam.SharePoint.Activities;assembly=UiPathTeam.SharePoint.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Check_For_Upload_Button" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:us="clr-namespace:UiPathTeam.SharePoint;assembly=UiPathTeam.SharePoint" xmlns:usa="clr-namespace:UiPathTeam.SharePoint.Activities;assembly=UiPathTeam.SharePoint.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="IN_strDMSHomeUrl" Type="InArgument(x:String)" />
     <x:Property Name="IN_strDMSUsername" Type="InArgument(x:String)" />
-    <x:Property Name="IN_browserDMS" Type="InArgument(ui:Browser)" />
     <x:Property Name="IN_strDMSPassword" Type="InArgument(ss:SecureString)" />
+    <x:Property Name="IN_browserDMS" Type="InArgument(ui:Browser)" />
+    <x:Property Name="OUT_boolUploadButton" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <this:Click_Properties_Button.IN_strDMSHomeUrl>
+  <this:Check_For_Upload_Button.IN_strDMSHomeUrl>
     <InArgument x:TypeArguments="x:String" />
-  </this:Click_Properties_Button.IN_strDMSHomeUrl>
-  <this:Click_Properties_Button.IN_strDMSUsername>
+  </this:Check_For_Upload_Button.IN_strDMSHomeUrl>
+  <this:Check_For_Upload_Button.IN_strDMSUsername>
     <InArgument x:TypeArguments="x:String" />
-  </this:Click_Properties_Button.IN_strDMSUsername>
-  <this:Click_Properties_Button.IN_browserDMS>
-    <InArgument x:TypeArguments="ui:Browser" />
-  </this:Click_Properties_Button.IN_browserDMS>
-  <this:Click_Properties_Button.IN_strDMSPassword>
+  </this:Check_For_Upload_Button.IN_strDMSUsername>
+  <this:Check_For_Upload_Button.IN_strDMSPassword>
     <InArgument x:TypeArguments="ss:SecureString" />
-  </this:Click_Properties_Button.IN_strDMSPassword>
+  </this:Check_For_Upload_Button.IN_strDMSPassword>
+  <this:Check_For_Upload_Button.IN_browserDMS>
+    <InArgument x:TypeArguments="ui:Browser" />
+  </this:Check_For_Upload_Button.IN_browserDMS>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
   <sap:VirtualizedContainerService.HintSize>652,550</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>Click_Properties_Button_1</sap2010:WorkflowViewState.IdRef>
+  <sap2010:WorkflowViewState.IdRef>Check_For_Upload_Button_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -50,7 +51,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -70,10 +71,9 @@
       <AssemblyReference>Microsoft.SharePoint.Client.Runtime</AssemblyReference>
       <AssemblyReference>Microsoft.SharePoint.Client</AssemblyReference>
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Click_Properties_Button" sap:VirtualizedContainerService.HintSize="510,485" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_For_Upload_Button" sap:VirtualizedContainerService.HintSize="510,485" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -91,19 +91,9 @@
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Properties' Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db7b362c-6798-4f42-b558-6e693d238b18" InformativeScreenshot="d03153ed021ac554528252ae7f060c0b" Selector="&lt;webctrl aaname='Properties' /&gt;&#xA;">
+                <ui:UiElementExists DisplayName="Element 'Upload' Exists" Exists="[OUT_boolUploadButton]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="d73353acc2d1929dd60a54d655c046cf" Selector="&lt;webctrl tag='SPAN' aaname='Upload' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -111,8 +101,8 @@
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
                     </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
               </ActivityAction>
             </ui:BrowserScope.Body>
           </ui:BrowserScope>
