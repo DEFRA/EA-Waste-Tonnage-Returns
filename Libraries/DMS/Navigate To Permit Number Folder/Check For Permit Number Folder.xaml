@@ -19,7 +19,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,550</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,550</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Check_For_Permit_Number_Folder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -89,15 +89,15 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
           </ActivityAction.Argument>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="IE" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8a241b74225848d30261996e695f35c5" Selector="[&quot;&lt;html url='&quot; + IN_strDMSSiteUrl + &quot;*' /&gt;&quot;]" UiBrowser="[OUT_browserDMS]">
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" BrowserType="Edge" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="8a241b74225848d30261996e695f35c5" Selector="[&quot;&lt;html url='&quot; + IN_strDMSSiteUrl + &quot;*' /&gt;&quot;]" UiBrowser="[OUT_browserDMS]">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <ui:UiElementExists DisplayName="Element 'Permit Documents' Exists" Exists="[OUT_boolPermitFolder]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                <ui:UiElementExists DisplayName="Element 'Permit Documents' Exists" Exists="[OUT_boolPermitFolder]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="f0509cf4acf3646e37fc0fbd3964750b" Selector="&lt;webctrl aaname='Permit Documents' tag='BUTTON' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="f0509cf4acf3646e37fc0fbd3964750b" Selector="&lt;webctrl tag='BUTTON' innertext='Permit Documents' /&gt;&#xA;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>

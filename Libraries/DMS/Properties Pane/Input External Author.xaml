@@ -24,7 +24,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,816</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,826</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Input_External_Author_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -77,55 +77,33 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Input_External_Author" sap:VirtualizedContainerService.HintSize="510,751" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Input_External_Author" sap:VirtualizedContainerService.HintSize="510,761" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <usa:SharepointApplicationScope ClientContext="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="468,659" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_1" QueryGrouping="False" ResetCredentials="False" SecurePassword="[IN_strDMSPassword]" SharePointInstanceType="Online" URL="[IN_strDMSHomeUrl]" UserName="[IN_strDMSUsername]">
+    <usa:SharepointApplicationScope ClientContext="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="468,669" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_1" QueryGrouping="False" ResetCredentials="False" SecurePassword="[IN_strDMSPassword]" SharePointInstanceType="Online" URL="[IN_strDMSHomeUrl]" UserName="[IN_strDMSUsername]">
       <usa:SharepointApplicationScope.Body>
         <ActivityAction x:TypeArguments="us:SharePointContextInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
           </ActivityAction.Argument>
-          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="IE" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,518" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
+          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="Edge" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,528" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence sap:VirtualizedContainerService.HintSize="376,382" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'External Author' Input Box" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7365f517-2b73-4132-8343-1f2ee59205f6" InformativeScreenshot="1256b7d333ab90a93d410d31a7d8d207" Selector="&lt;webctrl aaname='External Author' tag='LABEL' /&gt;&lt;nav up='2' /&gt;&lt;webctrl aaname='*' isleaf='1' tag='DIV' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                  </ui:Click>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'External Author' Input Box" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[IN_strExternalAuthor]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into 'External Author' Input Box" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[IN_strExternalAuthor]">
                     <ui:TypeInto.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d84a02ae-d778-4b65-8533-da01066ae00b" InformativeScreenshot="01974f0bdf6e02eb018dc5c62c1bb588" Selector="&lt;webctrl tag='INPUT' aaname='External Author*' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d84a02ae-d778-4b65-8533-da01066ae00b" InformativeScreenshot="01974f0bdf6e02eb018dc5c62c1bb588" Selector="&lt;webctrl aaname='External Author' tag='LABEL' /&gt;&lt;nav up='2' /&gt;&lt;webctrl aaname='*' isleaf='1' tag='DIV' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -135,6 +113,18 @@
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+                    <ui:SendHotkey.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="431de9a5-a9b9-495d-81c2-8233107f92a6" Selector="&lt;webctrl aaname='External Author' tag='LABEL' /&gt;&lt;nav up='2' /&gt;&lt;webctrl aaname='*' isleaf='1' tag='DIV' /&gt;">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </ui:SendHotkey.Target>
+                  </ui:SendHotkey>
                 </Sequence>
               </ActivityAction>
             </ui:BrowserScope.Body>

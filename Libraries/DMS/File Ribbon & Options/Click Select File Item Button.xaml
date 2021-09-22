@@ -21,7 +21,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,550</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,550</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Click_Select_File_Item_Button_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -92,7 +92,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
           </ActivityAction.Argument>
-          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="IE" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
+          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="Edge" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -110,7 +110,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db7b362c-6798-4f42-b558-6e693d238b18" InformativeScreenshot="6acf3fd0f6fd83b1f1a9f95f7109162a" Selector="[&quot;&lt;webctrl aaname='&quot; + IN_strDocumentName + &quot;' tag='BUTTON' /&gt;&lt;nav up='8' /&gt;&lt;webctrl tag='I' aaname='' /&gt;&quot;]">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db7b362c-6798-4f42-b558-6e693d238b18" InformativeScreenshot="fd472f27b278860029c3b68198aa8d23" Selector="&lt;html app='msedge.exe' htmlwindowname='{}' title='Document Management Service - Permit Documents - All Documents' /&gt;&#xD;&#xA;&lt;webctrl tag='SPAN' innertext='1 selected' /&gt;&#xD;&#xA;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>

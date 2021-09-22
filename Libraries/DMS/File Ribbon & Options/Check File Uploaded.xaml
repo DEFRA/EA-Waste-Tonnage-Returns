@@ -21,7 +21,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,550</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,550</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Check_File_Uploaded_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -85,7 +85,7 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
           </ActivityAction.Argument>
-          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="IE" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
+          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="Edge" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
@@ -93,7 +93,7 @@
                 </ActivityAction.Argument>
                 <ui:UiElementExists DisplayName="Element '1 selected' Exists" Exists="[OUT_boolFileUploaded]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="4acb5d885342aea74c1ebf8fe2c4f475" Selector="&lt;html htmlwindowname='{}' title='Document Management Service - Permit Documents - All Documents' /&gt;&#xD;&#xA;&lt;webctrl aaname='1 selected' /&gt;&#xD;&#xA;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="4acb5d885342aea74c1ebf8fe2c4f475" Selector="&lt;webctrl aaname='1 selected' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>

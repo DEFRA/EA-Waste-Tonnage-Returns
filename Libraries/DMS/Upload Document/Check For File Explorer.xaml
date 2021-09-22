@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,519</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,519</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Check_For_File_Explorer_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -60,7 +60,7 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:UiElementExists DisplayName="Element 'Upload' Exists" Exists="[OUT_boolFileExplorerExists]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="c14590ca78cd27940372aac3c0ecb0cf" Selector="&lt;wnd app='iexplore.exe' title='Choose File to Upload' /&gt;&lt;wnd aaname='File name:' idx='4' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="905977d920f205daf51ba3f53fe579d8" Selector="&lt;wnd app='msedge.exe' title='Open' /&gt;&lt;wnd aaname='File name:' idx='4' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>

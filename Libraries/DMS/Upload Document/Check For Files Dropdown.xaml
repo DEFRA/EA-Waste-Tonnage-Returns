@@ -1,27 +1,28 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Click_Close_On_Details_Pane" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:us="clr-namespace:UiPathTeam.SharePoint;assembly=UiPathTeam.SharePoint" xmlns:usa="clr-namespace:UiPathTeam.SharePoint.Activities;assembly=UiPathTeam.SharePoint.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Check_For_Files_Dropdown" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:us="clr-namespace:UiPathTeam.SharePoint;assembly=UiPathTeam.SharePoint" xmlns:usa="clr-namespace:UiPathTeam.SharePoint.Activities;assembly=UiPathTeam.SharePoint.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="IN_strDMSHomeUrl" Type="InArgument(x:String)" />
     <x:Property Name="IN_strDMSUsername" Type="InArgument(x:String)" />
     <x:Property Name="IN_strDMSPassword" Type="InArgument(ss:SecureString)" />
     <x:Property Name="IN_browserDMS" Type="InArgument(ui:Browser)" />
+    <x:Property Name="OUT_boolFilesButton" Type="OutArgument(x:Boolean)" />
   </x:Members>
-  <this:Click_Close_On_Details_Pane.IN_strDMSHomeUrl>
+  <this:Check_For_Files_Dropdown.IN_strDMSHomeUrl>
     <InArgument x:TypeArguments="x:String" />
-  </this:Click_Close_On_Details_Pane.IN_strDMSHomeUrl>
-  <this:Click_Close_On_Details_Pane.IN_strDMSUsername>
+  </this:Check_For_Files_Dropdown.IN_strDMSHomeUrl>
+  <this:Check_For_Files_Dropdown.IN_strDMSUsername>
     <InArgument x:TypeArguments="x:String" />
-  </this:Click_Close_On_Details_Pane.IN_strDMSUsername>
-  <this:Click_Close_On_Details_Pane.IN_strDMSPassword>
+  </this:Check_For_Files_Dropdown.IN_strDMSUsername>
+  <this:Check_For_Files_Dropdown.IN_strDMSPassword>
     <InArgument x:TypeArguments="ss:SecureString" />
-  </this:Click_Close_On_Details_Pane.IN_strDMSPassword>
-  <this:Click_Close_On_Details_Pane.IN_browserDMS>
+  </this:Check_For_Files_Dropdown.IN_strDMSPassword>
+  <this:Check_For_Files_Dropdown.IN_browserDMS>
     <InArgument x:TypeArguments="ui:Browser" />
-  </this:Click_Close_On_Details_Pane.IN_browserDMS>
+  </this:Check_For_Files_Dropdown.IN_browserDMS>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>652,590</sap:VirtualizedContainerService.HintSize>
-  <sap2010:WorkflowViewState.IdRef>Click_Close_On_Details_Pane_1</sap2010:WorkflowViewState.IdRef>
+  <sap:VirtualizedContainerService.HintSize>655,590</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Check_For_Files_Dropdown_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
       <x:String>System.Activities</x:String>
@@ -72,7 +73,7 @@
       <AssemblyReference>OfficeDevPnP.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Click_Close_On_Details_Pane" sap:VirtualizedContainerService.HintSize="510,485" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_For_Files_Dropdown" sap:VirtualizedContainerService.HintSize="510,485" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -84,25 +85,15 @@
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
           </ActivityAction.Argument>
-          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="IE" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
+          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="Edge" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Close' Button" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition Position="Center">
-                      <ui:CursorPosition.OffsetX>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetX>
-                      <ui:CursorPosition.OffsetY>
-                        <InArgument x:TypeArguments="x:Int32" />
-                      </ui:CursorPosition.OffsetY>
-                    </ui:CursorPosition>
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db7b362c-6798-4f42-b558-6e693d238b18" InformativeScreenshot="26a4676692c97f9a4114b1b662b607a3" Selector="&lt;webctrl aaname='' parentid='DetailsPane*' tag='I' /&gt;">
+                <ui:UiElementExists DisplayName="Element 'Files' Exists" Exists="[OUT_boolFilesButton]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a15bacd9-f5b1-43f2-b12b-b3a803976b4b" InformativeScreenshot="04b67f43c8dd0eaf7d31f9ab8056c230" Selector="&lt;webctrl tag='SPAN' aaname='Files' /&gt;&#xA;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -110,8 +101,8 @@
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
                     </ui:Target>
-                  </ui:Click.Target>
-                </ui:Click>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
               </ActivityAction>
             </ui:BrowserScope.Body>
           </ui:BrowserScope>

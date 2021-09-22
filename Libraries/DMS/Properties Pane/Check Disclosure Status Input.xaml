@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>619,788</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>655,550</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Check_Disclosure_Status_Input_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -68,68 +68,39 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Check_Disclosure_Status_Input" sap:VirtualizedContainerService.HintSize="510,723" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Check_Disclosure_Status_Input" sap:VirtualizedContainerService.HintSize="510,485" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <usa:SharepointApplicationScope ClientContext="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="468,631" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_1" QueryGrouping="False" ResetCredentials="False" SecurePassword="[IN_strDMSPassword]" SharePointInstanceType="Online" URL="[IN_strDMSHomeUrl]" UserName="[IN_strDMSUsername]">
+    <usa:SharepointApplicationScope ClientContext="{x:Null}" LoginTimeout="{x:Null}" Password="{x:Null}" DisplayName="Sharepoint application scope" sap:VirtualizedContainerService.HintSize="468,393" sap2010:WorkflowViewState.IdRef="SharepointApplicationScope_1" QueryGrouping="False" ResetCredentials="False" SecurePassword="[IN_strDMSPassword]" SharePointInstanceType="Online" URL="[IN_strDMSHomeUrl]" UserName="[IN_strDMSUsername]">
       <usa:SharepointApplicationScope.Body>
         <ActivityAction x:TypeArguments="us:SharePointContextInfo">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="us:SharePointContextInfo" Name="SharePointContextInfoTag" />
           </ActivityAction.Argument>
-          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="IE" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,490" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
+          <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[IN_browserDMS]" BrowserType="Edge" DisplayName="Attach DMS Browser" sap:VirtualizedContainerService.HintSize="434,252" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="1c841442f149fac25b52211068281414">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="376,344" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Disclosure Status' Input Box" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition Position="Center">
-                        <ui:CursorPosition.OffsetX>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetX>
-                        <ui:CursorPosition.OffsetY>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:CursorPosition.OffsetY>
-                      </ui:CursorPosition>
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7365f517-2b73-4132-8343-1f2ee59205f6" InformativeScreenshot="7270d2004d051fbea7f5e5fe50b469df" Selector="&lt;webctrl aaname='Disclosure Status' tag='LABEL' /&gt;&lt;nav up='2' /&gt;&lt;webctrl aaname='*' isleaf='1' tag='DIV' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Click.Target>
-                  </ui:Click>
-                  <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get 'Disclosure Status' Text" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
-                    <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2760cfc1-3201-44b2-b405-9d92ad04aa98" InformativeScreenshot="e7f02c1fe285fd13955a84536ca794b5" Selector="&lt;webctrl tag='INPUT' aaname='Disclosure Status*' /&gt;">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:GetValue.Target>
-                    <ui:GetValue.Value>
-                      <OutArgument x:TypeArguments="x:String">[OUT_strDisclosureStatus]</OutArgument>
-                    </ui:GetValue.Value>
-                  </ui:GetValue>
-                </Sequence>
+                <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get 'Disclosure Status' Text" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+                  <ui:GetValue.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2760cfc1-3201-44b2-b405-9d92ad04aa98" InformativeScreenshot="d9b9cb1d3fc938bbbdaa0c378dff67c2" Selector="&lt;webctrl aaname='Disclosure Status' tag='LABEL' /&gt;&#xA;&lt;nav up='2' /&gt;&#xA;&lt;webctrl tag='DIV' idx='3' /&gt;&#xA;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:GetValue.Target>
+                  <ui:GetValue.Value>
+                    <OutArgument x:TypeArguments="x:String">[OUT_strDisclosureStatus]</OutArgument>
+                  </ui:GetValue.Value>
+                </ui:GetValue>
               </ActivityAction>
             </ui:BrowserScope.Body>
           </ui:BrowserScope>
