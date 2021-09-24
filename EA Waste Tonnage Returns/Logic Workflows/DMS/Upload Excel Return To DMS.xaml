@@ -476,7 +476,7 @@
                                           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="IN_strDisclosureStatus" />
                                         </InArgument>
                                         <InArgument x:TypeArguments="x:String" x:Key="IN_strDocumentName">
-                                          <Literal x:TypeArguments="x:String">Testing 22.09.21</Literal>
+                                          <Literal x:TypeArguments="x:String">Testing 23.09.21</Literal>
                                         </InArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
